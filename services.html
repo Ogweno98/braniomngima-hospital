@@ -1,635 +1,687 @@
-```html
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Services | Braniomngima Hospital</title>
+```
+<title>Services | Braniomngima Hospital</title>
 
-    <meta name="description"
-          content="Healthcare services at Braniomngima Hospital in Oyugis, Kenya.">
+<meta name="description"
+      content="Healthcare services at Braniomngima Hospital in Oyugis, Kenya.">
+
 <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #26332f;
+        line-height: 1.6;
+        background: #ffffff;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #087f5b;
+        color: white;
+        padding: 9px 6%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+
+    header {
+        background: white;
+        padding: 18px 6%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e5eeeb;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .logo-placeholder {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        background: #e8f5f0;
+        color: #087f5b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .hospital-name {
+        font-size: 21px;
+        font-weight: 700;
+        color: #075c43;
+    }
+
+    .hospital-location {
+        font-size: 12px;
+        color: #66756f;
+    }
+
+    nav {
+        display: flex;
+        gap: 28px;
+    }
+
+    nav a {
+        color: #344840;
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    nav a:hover,
+    nav .active {
+        color: #087f5b;
+    }
+
+    .page-hero {
+        background:
+            linear-gradient(rgba(7, 92, 67, 0.68), rgba(7, 92, 67, 0.68)),
+            url("images/hospital-services.jpg");
+        background-size: cover;
+        background-position: center;
+        min-height: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 60px 6%;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(40px, 6vw, 60px);
+        margin-bottom: 12px;
+    }
+
+    .page-hero p {
+        font-size: 18px;
+        color: #eefaf6;
+    }
+
+    section {
+        padding: 75px 6%;
+    }
+
+    .content {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .intro {
+        max-width: 780px;
+        margin: 0 auto 45px;
+        text-align: center;
+    }
+
+    .tag {
+        color: #087f5b;
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 38px;
+        color: #18352c;
+        margin: 8px 0 18px;
+    }
+
+    .intro p {
+        color: #66756f;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .service-card {
+        background: #ffffff;
+        border: 1px solid #e0ebe7;
+        border-radius: 15px;
+        padding: 30px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(7, 92, 67, 0.08);
+    }
+
+    .service-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 12px;
+        background: #e8f5f0;
+        color: #087f5b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+        color: #18352c;
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+
+    .service-card p {
+        color: #66756f;
+        font-size: 15px;
+    }
+
+    .note-section {
+        background: #f4faf8;
+    }
+
+    .note-box {
+        max-width: 850px;
+        margin: auto;
+        text-align: center;
+        background: white;
+        border: 1px solid #dfeae5;
+        border-radius: 15px;
+        padding: 35px;
+    }
+
+    .note-box h2 {
+        font-size: 30px;
+    }
+
+    .note-box p {
+        color: #66756f;
+    }
+
+    .cta {
+        background: #087f5b;
+        color: white;
+        text-align: center;
+    }
+
+    .cta h2 {
+        color: white;
+    }
+
+    .cta p {
+        color: #e5f5ef;
+        max-width: 700px;
+        margin: 0 auto 25px;
+    }
+
+    .btn {
+        display: inline-block;
+        background: white;
+        color: #087f5b;
+        padding: 13px 24px;
+        border-radius: 7px;
+        font-weight: 700;
+    }
+
+    .btn:hover {
+        background: #e8f5f0;
+    }
+
+    footer {
+        background: #07513d;
+        color: white;
+        padding: 45px 6% 25px;
+    }
+
+    .footer-grid {
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 35px;
+    }
+
+    footer h3 {
+        margin-bottom: 12px;
+    }
+
+    footer p,
+    footer a {
+        color: #c4d9d2;
+        font-size: 14px;
+    }
+
+    footer a:hover {
+        color: white;
+    }
+
+    .footer-bottom {
+        max-width: 1100px;
+        margin: auto;
+        border-top: 1px solid rgba(255,255,255,0.18);
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap;
+        color: #a8c3ba;
+        font-size: 13px;
+    }
+
+    .jompo-link {
+        color: #c4d9d2;
+        font-weight: bold;
+    }
+
+    .jompo-link:hover {
+        color: white;
+    }
+
+    @media (max-width: 900px) {
+
+        .services-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #26332f;
-            line-height: 1.6;
-            background: #ffffff;
-        }
+    }
 
-        a {
-            text-decoration: none;
-        }
+    @media (max-width: 800px) {
 
         .top-bar {
-            background: #087f5b;
-            color: white;
-            padding: 9px 6%;
-            display: flex;
-            justify-content: space-between;
-            font-size: 14px;
+            flex-direction: column;
+            text-align: center;
+            gap: 4px;
         }
 
         header {
-            background: white;
-            padding: 18px 6%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #e5eeeb;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-placeholder {
-            width: 48px;
-            height: 48px;
-            border-radius: 10px;
-            background: #e8f5f0;
-            color: #087f5b;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .hospital-name {
-            font-size: 21px;
-            font-weight: 700;
-            color: #075c43;
-        }
-
-        .hospital-location {
-            font-size: 12px;
-            color: #66756f;
+            flex-direction: column;
+            gap: 15px;
         }
 
         nav {
-            display: flex;
-            gap: 28px;
-        }
-
-        nav a {
-            color: #344840;
-            font-weight: 600;
-            font-size: 15px;
-        }
-
-        nav a:hover,
-        nav .active {
-            color: #087f5b;
-        }
-
-        .page-hero {
-            background:
-                linear-gradient(rgba(7, 92, 67, 0.68), rgba(7, 92, 67, 0.68)),
-                url("images/hospital-services.jpg");
-            background-size: cover;
-            background-position: center;
-            min-height: 360px;
-            display: flex;
-            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
             justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 60px 6%;
         }
 
-        .page-hero h1 {
-            font-size: clamp(40px, 6vw, 60px);
-            margin-bottom: 12px;
-        }
-
-        .page-hero p {
-            font-size: 18px;
-            color: #eefaf6;
-        }
-
-        section {
-            padding: 75px 6%;
-        }
-
-        .content {
-            max-width: 1150px;
-            margin: auto;
-        }
-
-        .section-heading {
-            max-width: 700px;
-            margin-bottom: 40px;
-        }
-
-        .tag {
-            color: #087f5b;
-            font-size: 13px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .services-grid,
+        .footer-grid {
+            grid-template-columns: 1fr;
         }
 
         h2 {
-            font-size: 38px;
-            color: #18352c;
-            margin: 8px 0 15px;
+            font-size: 30px;
         }
+    }
+</style>
+```
 
-        .section-heading p {
-            color: #66756f;
-        }
-
-        .services {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .service-card {
-            border: 1px solid #e0ebe7;
-            border-radius: 15px;
-            padding: 32px;
-            background: white;
-            transition: 0.2s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(8, 127, 91, 0.08);
-        }
-
-        .service-icon {
-            width: 58px;
-            height: 58px;
-            border-radius: 12px;
-            background: #e8f5f0;
-            color: #087f5b;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 27px;
-            margin-bottom: 18px;
-        }
-
-        .service-card h3 {
-            color: #18352c;
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-
-        .service-card p {
-            color: #66756f;
-            font-size: 15px;
-        }
-
-        .note {
-            margin-top: 40px;
-            padding: 22px 25px;
-            background: #f4faf8;
-            border-left: 4px solid #087f5b;
-            border-radius: 7px;
-            color: #52635e;
-        }
-
-        .cta {
-            background: #087f5b;
-            color: white;
-            text-align: center;
-        }
-
-        .cta h2 {
-            color: white;
-        }
-
-        .cta p {
-            color: #e5f5ef;
-            max-width: 650px;
-            margin: 0 auto 25px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 13px 23px;
-            border-radius: 7px;
-            font-weight: 700;
-            background: white;
-            color: #087f5b;
-        }
-
-        footer {
-            background: #07513d;
-            color: white;
-            padding: 45px 6% 25px;
-        }
-
-        .footer-grid {
-            max-width: 1150px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 35px;
-        }
-
-        footer h3 {
-            margin-bottom: 12px;
-        }
-
-        footer p,
-        footer a {
-            color: #c4d9d2;
-            font-size: 14px;
-        }
-
-        footer a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            max-width: 1150px;
-            margin: auto;
-            border-top: 1px solid rgba(255,255,255,0.18);
-            padding-top: 20px;
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-            flex-wrap: wrap;
-            color: #a8c3ba;
-            font-size: 13px;
-        }
-
-        .jompo-link {
-            color: #c4d9d2;
-            font-weight: bold;
-        }
-
-        .jompo-link:hover {
-            color: white;
-        }
-
-        @media (max-width: 850px) {
-
-            .top-bar {
-                flex-direction: column;
-                text-align: center;
-                gap: 4px;
-            }
-
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav {
-                gap: 16px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .services,
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            h2 {
-                font-size: 30px;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- TOP BAR -->
-    <div class="top-bar">
-        <span>Braniomngima Hospital — Oyugis, Kenya</span>
-        <span>SHA Accredited</span>
-    </div>
+```
+<div class="top-bar">
+    <span>Braniomngima Hospital — Oyugis, Kenya</span>
+    <span>SHA Accredited</span>
+</div>
 
+<header>
 
-    <!-- NAVIGATION -->
-    <header>
+    <div class="logo-area">
 
-        <div class="logo-area">
-
-            <div class="logo-placeholder">
-                BH
-            </div>
-
-            <div>
-                <div class="hospital-name">
-                    Braniomngima Hospital
-                </div>
-
-                <div class="hospital-location">
-                    Oyugis • Kisii–Kisumu Highway
-                </div>
-            </div>
-
+        <div class="logo-placeholder">
+            BH
         </div>
 
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html" class="active">Services</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
-    </header>
-
-
-    <!-- PAGE HERO -->
-    <section class="page-hero">
-
         <div>
+            <div class="hospital-name">
+                Braniomngima Hospital
+            </div>
 
-            <h1>Our Services</h1>
+            <div class="hospital-location">
+                Oyugis • Kisii–Kisumu Highway
+            </div>
+        </div>
+
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About Us
+        </a>
+
+        <a href="services.html" class="active">
+            Services
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+<section class="page-hero">
+
+    <div>
+
+        <h1>
+            Our Services
+        </h1>
+
+        <p>
+            Healthcare services for individuals and families
+            in Oyugis and surrounding communities.
+        </p>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="content">
+
+        <div class="intro">
+
+            <span class="tag">
+                Healthcare Services
+            </span>
+
+            <h2>
+                Supporting Your Healthcare Needs
+            </h2>
 
             <p>
-                Healthcare services for patients and families
-                in Oyugis and surrounding communities.
+                Braniomngima Hospital provides healthcare services
+                for the local community. The service information
+                below will be expanded and confirmed with hospital
+                management before the website is finalized.
             </p>
 
         </div>
 
-    </section>
+        <div class="services-grid">
 
+            <div class="service-card">
 
-    <!-- SERVICES -->
-    <section>
+                <div class="service-icon">
+                    🩺
+                </div>
 
-        <div class="content">
-
-            <div class="section-heading">
-
-                <span class="tag">Healthcare</span>
-
-                <h2>
-                    Healthcare Services
-                </h2>
+                <h3>
+                    General Medical Care
+                </h3>
 
                 <p>
-                    This section will contain the hospital's
-                    confirmed list of medical services and
-                    departments.
+                    Healthcare support for common medical needs,
+                    consultations and patient care.
                 </p>
 
             </div>
 
+            <div class="service-card">
 
-            <div class="services">
-
-
-                <div class="service-card">
-
-                    <div class="service-icon">
-                        🩺
-                    </div>
-
-                    <h3>
-                        Outpatient Care
-                    </h3>
-
-                    <p>
-                        General outpatient healthcare and
-                        consultation services.
-                    </p>
-
+                <div class="service-icon">
+                    ❤️
                 </div>
 
+                <h3>
+                    Outpatient Care
+                </h3>
 
-                <div class="service-card">
-
-                    <div class="service-icon">
-                        👶
-                    </div>
-
-                    <h3>
-                        Maternal & Child Health
-                    </h3>
-
-                    <p>
-                        Healthcare services for mothers,
-                        children and families.
-                    </p>
-
-                </div>
-
-
-                <div class="service-card">
-
-                    <div class="service-icon">
-                        🔬
-                    </div>
-
-                    <h3>
-                        Laboratory Services
-                    </h3>
-
-                    <p>
-                        Diagnostic laboratory services
-                        subject to hospital confirmation.
-                    </p>
-
-                </div>
-
-
-                <div class="service-card">
-
-                    <div class="service-icon">
-                        💊
-                    </div>
-
-                    <h3>
-                        Pharmacy
-                    </h3>
-
-                    <p>
-                        Pharmacy and medication services
-                        subject to hospital confirmation.
-                    </p>
-
-                </div>
-
-
-                <div class="service-card">
-
-                    <div class="service-icon">
-                        ❤️
-                    </div>
-
-                    <h3>
-                        Medical Consultation
-                    </h3>
-
-                    <p>
-                        Professional medical consultation
-                        services for patients.
-                    </p>
-
-                </div>
-
-
-                <div class="service-card">
-
-                    <div class="service-icon">
-                        🏥
-                    </div>
-
-                    <h3>
-                        Hospital Care
-                    </h3>
-
-                    <p>
-                        Patient care services provided
-                        according to the hospital's facilities
-                        and available departments.
-                    </p>
-
-                </div>
-
+                <p>
+                    Accessible outpatient healthcare for patients
+                    who require medical attention and consultation.
+                </p>
 
             </div>
 
+            <div class="service-card">
 
-            <div class="note">
+                <div class="service-icon">
+                    👶
+                </div>
 
-                <strong>Information for patients:</strong>
-                The services displayed on this page will be
-                updated with the hospital's official service
-                list and departments.
+                <h3>
+                    Maternal & Child Health
+                </h3>
+
+                <p>
+                    Maternal and child healthcare information will
+                    be updated following confirmation from the
+                    hospital.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    💊
+                </div>
+
+                <h3>
+                    Pharmacy Services
+                </h3>
+
+                <p>
+                    Pharmacy-related services and availability
+                    will be confirmed by hospital management.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🔬
+                </div>
+
+                <h3>
+                    Laboratory Services
+                </h3>
+
+                <p>
+                    Laboratory services and available tests will
+                    be added after confirmation.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🏥
+                </div>
+
+                <h3>
+                    Additional Services
+                </h3>
+
+                <p>
+                    Additional departments and specialized
+                    services will be listed once confirmed by
+                    hospital management.
+                </p>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
 
+</section>
 
-    <!-- CTA -->
-    <section class="cta">
+<section class="note-section">
+
+    <div class="note-box">
+
+        <span class="tag">
+            Information Update
+        </span>
+
+        <h2>
+            More Services Coming Soon
+        </h2>
+
+        <p>
+            The hospital's complete list of departments,
+            specialized services and available facilities will
+            be added after confirmation by hospital management.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="cta">
+
+    <div class="content">
 
         <h2>
             Need More Information?
         </h2>
 
         <p>
-            Contact Braniomngima Hospital to learn more about
-            available healthcare services and how to reach us.
+            Visit our contact page for the hospital's location
+            and additional contact information.
         </p>
 
         <a href="contact.html" class="btn">
             Contact Us
         </a>
 
-    </section>
+    </div>
 
+</section>
 
-    <!-- FOOTER -->
-    <footer>
+<footer>
 
-        <div class="footer-grid">
+    <div class="footer-grid">
 
-            <div>
+        <div>
 
-                <h3>
-                    Braniomngima Hospital
-                </h3>
+            <h3>
+                Braniomngima Hospital
+            </h3>
 
-                <p>
-                    Along the Kisii–Kisumu Highway,
-                    Oyugis, Kenya.
-                </p>
+            <p>
+                Along the Kisii–Kisumu Highway,
+                Oyugis, Kenya.
+            </p>
 
-                <p>
-                    Opposite Equity Bank.
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h3>
-                    Quick Links
-                </h3>
-
-                <p>
-                    <a href="index.html">Home</a>
-                </p>
-
-                <p>
-                    <a href="about.html">About Us</a>
-                </p>
-
-                <p>
-                    <a href="services.html">Services</a>
-                </p>
-
-                <p>
-                    <a href="contact.html">Contact</a>
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h3>
-                    Location
-                </h3>
-
-                <p>
-                    Oyugis, Kenya
-                </p>
-
-                <p>
-                    Opposite Equity Bank
-                </p>
-
-            </div>
+            <p>
+                Opposite Equity Bank.
+            </p>
 
         </div>
 
+        <div>
 
-        <div class="footer-bottom">
+            <h3>
+                Quick Links
+            </h3>
 
-            <span>
-                © 2026 Braniomngima Hospital.
-                All Rights Reserved.
-            </span>
-
-            <span>
-                Website designed & developed by
-
-                <a class="jompo-link"
-                   href="https://jompo.co.ke"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    JOMPO Digital Solutions
-
+            <p>
+                <a href="index.html">
+                    Home
                 </a>
+            </p>
 
-            </span>
+            <p>
+                <a href="about.html">
+                    About Us
+                </a>
+            </p>
+
+            <p>
+                <a href="services.html">
+                    Services
+                </a>
+            </p>
+
+            <p>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </p>
 
         </div>
 
-    </footer>
+        <div>
+
+            <h3>
+                Location
+            </h3>
+
+            <p>
+                Oyugis, Kenya
+            </p>
+
+            <p>
+                Opposite Equity Bank
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Braniomngima Hospital.
+            All Rights Reserved.
+        </span>
+
+        <span>
+
+            Website designed & developed by
+
+            <a class="jompo-link"
+               href="https://jompo.co.ke"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                JOMPO Digital Solutions
+
+            </a>
+
+        </span>
+
+    </div>
+
+</footer>
+```
 
 </body>
 </html>
-```
