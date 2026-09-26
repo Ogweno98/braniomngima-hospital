@@ -3,65 +3,361 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Contact Us | Braniomngima Hospital</title>
-    <meta name="description" content="Contact Braniomngima Hospital in Oyugis, Kenya. Located along the Kisii–Kisumu Highway, opposite Equity Bank, next to Eagle Place.">
+
+    <meta name="description"
+          content="Contact Braniomngima Hospital in Oyugis, Kenya. Located along the Kisii–Kisumu Highway, opposite Equity Bank, next to Eagle Place.">
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, Helvetica, sans-serif; color: #26332f; line-height: 1.6; background: #ffffff; }
-        a { text-decoration: none; }
-        .top-bar { background: #087f5b; color: white; padding: 9px 6%; display: flex; justify-content: space-between; font-size: 14px; }
-        header { background: white; padding: 18px 6%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5eeeb; position: sticky; top: 0; z-index: 1000; }
-        .logo-area { display: flex; align-items: center; gap: 12px; }
-        .logo-placeholder { width: 48px; height: 48px; border-radius: 10px; background: #e8f5f0; color: #087f5b; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: bold; }
-        .hospital-name { font-size: 21px; font-weight: 700; color: #075c43; }
-        .hospital-location { font-size: 12px; color: #66756f; }
-        nav { display: flex; gap: 28px; }
-        nav a { color: #344840; font-weight: 600; font-size: 15px; }
-        nav a:hover, nav .active { color: #087f5b; }
-        .page-hero { background: linear-gradient(rgba(7, 92, 67, 0.68), rgba(7, 92, 67, 0.68)), url("images/hospital-contact.jpg"); background-size: cover; background-position: center; min-height: 360px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 60px 6%; }
-        .page-hero h1 { font-size: clamp(40px, 6vw, 60px); margin-bottom: 12px; }
-        .page-hero p { font-size: 18px; color: #eefaf6; }
-        section { padding: 75px 6%; }
-        .content { max-width: 1100px; margin: auto; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; }
-        .tag { color: #087f5b; font-size: 13px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-        h2 { font-size: 38px; color: #18352c; margin: 8px 0 18px; }
-        .intro-text p { color: #66756f; margin-bottom: 25px; }
-        .contact-card { background: #f4faf8; border: 1px solid #e0ebe7; border-radius: 15px; padding: 28px; margin-bottom: 18px; }
-        .contact-card h3 { color: #18352c; margin-bottom: 7px; }
-        .contact-card p, .contact-card a { color: #66756f; }
-        .contact-card a { color: #087f5b; font-weight: bold; }
-        .contact-card a:hover { text-decoration: underline; }
-        .map-box { min-height: 360px; border-radius: 16px; overflow: hidden; border: 1px solid #d9e9e3; background: #e8f5f0; }
-        .hours { background: #087f5b; color: white; }
-        .hours-box { max-width: 800px; margin: auto; text-align: center; }
-        .hours h2 { color: white; }
-        .hours p { color: #e5f5ef; }
-        .hours-placeholder { margin-top: 20px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; }
-        .hours-item h4 { font-size: 18px; margin-bottom: 5px; color: #ffffff; }
-        footer { background: #07513d; color: white; padding: 45px 6% 25px; }
-        .footer-grid { max-width: 1100px; margin: auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 35px; }
-        footer h3 { margin-bottom: 12px; }
-        footer p, footer a { color: #c4d9d2; font-size: 14px; }
-        footer a:hover { color: white; }
-        .footer-bottom { max-width: 1100px; margin: auto; border-top: 1px solid rgba(255,255,255,0.18); padding-top: 20px; display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; color: #a8c3ba; font-size: 13px; }
-        .jompo-link { color: #c4d9d2; font-weight: bold; }
-        .jompo-link:hover { color: white; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #26332f;
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .top-bar {
+            background: #087f5b;
+            color: white;
+            padding: 9px 6%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        header {
+            background: white;
+            padding: 18px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e5eeeb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-placeholder {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: #e8f5f0;
+            color: #087f5b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .hospital-name {
+            font-size: 21px;
+            font-weight: 700;
+            color: #075c43;
+        }
+
+        .hospital-location {
+            font-size: 12px;
+            color: #66756f;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #344840;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        nav a:hover,
+        nav .active {
+            color: #087f5b;
+        }
+
+        .page-hero {
+            background:
+                linear-gradient(rgba(7, 92, 67, 0.68), rgba(7, 92, 67, 0.68)),
+                url("images/hospital-contact.jpg");
+            background-size: cover;
+            background-position: center;
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 60px 6%;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(40px, 6vw, 60px);
+            margin-bottom: 12px;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+            color: #eefaf6;
+        }
+
+        section {
+            padding: 75px 6%;
+        }
+
+        .content {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+        }
+
+        .tag {
+            color: #087f5b;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 38px;
+            color: #18352c;
+            margin: 8px 0 18px;
+        }
+
+        .intro-text p {
+            color: #66756f;
+            margin-bottom: 25px;
+        }
+
+        .contact-card {
+            background: #f4faf8;
+            border: 1px solid #e0ebe7;
+            border-radius: 15px;
+            padding: 28px;
+            margin-bottom: 18px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(8, 127, 91, 0.05);
+        }
+
+        .contact-card h3 {
+            color: #18352c;
+            margin-bottom: 7px;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            color: #66756f;
+        }
+
+        .contact-card a {
+            color: #087f5b;
+            font-weight: bold;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .map-box {
+            min-height: 360px;
+            border-radius: 16px;
+            background: #e8f5f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+            border: 1px solid #d9e9e3;
+        }
+
+        .map-content h3 {
+            color: #18352c;
+            font-size: 24px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .map-content p {
+            color: #66756f;
+            margin-bottom: 25px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .map-btn {
+            display: inline-block;
+            background: #087f5b;
+            color: #ffffff !important;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 14px 28px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(8, 127, 91, 0.2);
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .map-btn:hover {
+            background: #066346;
+            transform: translateY(-1px);
+        }
+
+        .hours {
+            background: #087f5b;
+            color: white;
+        }
+
+        .hours-box {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .hours h2 {
+            color: white;
+        }
+
+        .hours p {
+            color: #e5f5ef;
+        }
+
+        .hours-placeholder {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .hours-item h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        footer {
+            background: #07513d;
+            color: white;
+            padding: 45px 6% 25px;
+        }
+
+        .footer-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 35px;
+        }
+
+        footer h3 {
+            margin-bottom: 12px;
+        }
+
+        footer p,
+        footer a {
+            color: #c4d9d2;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.18);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            color: #a8c3ba;
+            font-size: 13px;
+        }
+
+        .jompo-link {
+            color: #c4d9d2;
+            font-weight: bold;
+        }
+
+        .jompo-link:hover {
+            color: white;
+        }
+
         @media (max-width: 800px) {
-            .top-bar { flex-direction: column; text-align: center; gap: 4px; }
-            header { flex-direction: column; gap: 15px; }
-            nav { gap: 16px; flex-wrap: wrap; justify-content: center; }
-            .contact-grid, .footer-grid { grid-template-columns: 1fr; }
-            .hours-placeholder { grid-template-columns: 1fr; gap: 15px; }
-            h2 { font-size: 30px; }
+            .top-bar {
+                flex-direction: column;
+                text-align: center;
+                gap: 4px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .contact-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hours-placeholder {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
         }
     </style>
 </head>
+
 <body>
+
     <div class="top-bar">
         <span>Braniomngima Hospital — Oyugis, Kenya</span>
         <span>SHA Accredited</span>
     </div>
+
     <header>
         <div class="logo-area">
             <div class="logo-placeholder">BH</div>
@@ -77,91 +373,33 @@
             <a href="contact.html" class="active">Contact</a>
         </nav>
     </header>
+
     <section class="page-hero">
         <div>
             <h1>Contact Us</h1>
             <p>We are conveniently located in Oyugis, along the Kisii–Kisumu Highway.</p>
         </div>
     </section>
+
     <section>
         <div class="content">
             <div class="contact-grid">
+
                 <div class="intro-text">
                     <span class="tag">Get In Touch</span>
                     <h2>Visit Braniomngima Hospital</h2>
                     <p>Braniomngima Hospital is located along the Kisii–Kisumu Highway in Oyugis, opposite Equity Bank, next to Eagle Place.</p>
+
                     <div class="contact-card">
                         <h3>📍 Location</h3>
                         <p>Along Kisii–Kisumu Highway, Oyugis, Kenya.</p>
                         <p>Opposite Equity Bank, Next to Eagle Place Building.</p>
                     </div>
+
                     <div class="contact-card">
                         <h3>📞 Phone</h3>
                         <p><a href="tel:+254724620949">+254 724 620 949</a></p>
                     </div>
+
                     <div class="contact-card">
                         <h3>💬 WhatsApp</h3>
-                        <p><a href="https://wa.me" target="_blank">+254 724 620 949</a></p>
-                    </div>
-                    <div class="contact-card">
-                        <h3>✉️ Email</h3>
-                        <p><a href="mailto:info@braniomngimahospital.com">info@braniomngimahospital.com</a></p>
-                    </div>
-                </div>
-                <div class="map-box">
-                    <iframe 
-                        width="100%" 
-                        height="360" 
-                        style="border:0; display:block;" 
-                        loading="lazy" 
-                        allowfullscreen
-                        src="https://google.com">
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="hours">
-        <div class="hours-box">
-            <span class="tag" style="color: #e5f5ef;">Availability</span>
-            <h2>Opening Hours</h2>
-            <p>Providing reliable medical services to the Oyugis community when it matters most.</p>
-            <div class="hours-placeholder">
-                <div class="hours-item">
-                    <h4>🏥 Emergency Services</h4>
-                    <p>24 Hours / 7 Days a week</p>
-                </div>
-                <div class="hours-item">
-                    <h4>🩺 Outpatient & Consultations</h4>
-                    <p>Daily: 8:00 AM – 6:00 PM</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="footer-grid">
-            <div>
-                <h3>Braniomngima Hospital</h3>
-                <p style="margin-bottom: 10px;">Along the Kisii–Kisumu Highway, Oyugis, Kenya.</p>
-                <p>Opposite Equity Bank, Next to Eagle Place.</p>
-            </div>
-            <div>
-                <h3>Quick Links</h3>
-                <p style="margin-bottom: 8px;"><a href="index.html">Home</a></p>
-                <p style="margin-bottom: 8px;"><a href="about.html">About Us</a></p>
-                <p style="margin-bottom: 8px;"><a href="services.html">Services</a></p>
-                <p><a href="contact.html">Contact</a></p>
-            </div>
-            <div>
-                <h3>Location</h3>
-                <p style="margin-bottom: 5px;">Oyugis, Kenya</p>
-                <p>Opposite Equity Bank</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>&copy; 2026 Braniomngima Hospital. All Rights Reserved.</span>
-            <span>Website designed & developed by <a href="#" class="jompo-link">JOMPO Digital Solutions</a></span>
-        </div>
-    </footer>
-</body>
-</html>
