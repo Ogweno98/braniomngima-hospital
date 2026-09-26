@@ -32,9 +32,7 @@
         .contact-card p, .contact-card a { color: #66756f; }
         .contact-card a { color: #087f5b; font-weight: bold; }
         .contact-card a:hover { text-decoration: underline; }
-        .map-box { min-height: 360px; border-radius: 16px; background: #e8f5f0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 30px; border: 1px solid #d9e9e3; }
-        .map-content h3 { color: #18352c; font-size: 25px; margin-bottom: 10px; }
-        .map-content p { color: #66756f; margin-bottom: 20px; }
+        .map-box { min-height: 360px; border-radius: 16px; overflow: hidden; border: 1px solid #d9e9e3; }
         .hours { background: #087f5b; color: white; }
         .hours-box { max-width: 800px; margin: auto; text-align: center; }
         .hours h2 { color: white; }
@@ -111,12 +109,15 @@
                     </div>
                 </div>
                 <div class="map-box">
-                    <div class="map-content">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#087f5b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 15px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        <h3>Find Us in Oyugis</h3>
-                        <p>Braniomngima Hospital is along the Kisii–Kisumu Highway, opposite Equity Bank, next to Eagle Place.</p>
-                        <p style="font-size: 14px; background: rgba(8,127,91,0.08); padding: 10px; border-radius: 8px; color: #087f5b; font-weight: bold;">Interactive Google Maps location will load here once live coordinates are linked.</p>
-                    </div>
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; min-height: 360px;" 
+                        loading="lazy" 
+                        allowfullscreen 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://google.com">
+                    </iframe>
                 </div>
             </div>
         </div>
