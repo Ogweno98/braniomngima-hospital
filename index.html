@@ -1,415 +1,805 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Braniomngima Hospital | Oyugis, Kenya</title>
+```
+<title>Braniomngima Hospital | Oyugis, Kenya</title>
 
-    <meta name="description"
-          content="Braniomngima Hospital is located along the Kisii–Kisumu Highway in Oyugis, opposite Equity Bank.">
+<meta name="description"
+      content="Braniomngima Hospital in Oyugis, Kenya, along the Kisii–Kisumu Highway, opposite Equity Bank. SHA accredited.">
 
-</head>
 <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #26332f;
-            line-height: 1.6;
-            background: #ffffff;
-        }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #26332f;
+        line-height: 1.6;
+        background: #ffffff;
+    }
 
-        a {
-            text-decoration: none;
-        }
+    a {
+        text-decoration: none;
+    }
 
-        /* TOP BAR */
+    .top-bar {
+        background: #087f5b;
+        color: white;
+        padding: 9px 6%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+
+    header {
+        background: white;
+        padding: 18px 6%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e5eeeb;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .logo-placeholder {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        background: #e8f5f0;
+        color: #087f5b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .hospital-name {
+        font-size: 21px;
+        font-weight: 700;
+        color: #075c43;
+    }
+
+    .hospital-location {
+        font-size: 12px;
+        color: #66756f;
+    }
+
+    nav {
+        display: flex;
+        gap: 28px;
+    }
+
+    nav a {
+        color: #344840;
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    nav a:hover,
+    nav .active {
+        color: #087f5b;
+    }
+
+    .hero {
+        min-height: 650px;
+        background:
+            linear-gradient(rgba(7, 92, 67, 0.68), rgba(7, 92, 67, 0.68)),
+            url("images/hospital-hero.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        padding: 80px 6%;
+        color: white;
+    }
+
+    .hero-content {
+        max-width: 760px;
+    }
+
+    .hero-tag {
+        display: inline-block;
+        background: rgba(255,255,255,0.14);
+        border: 1px solid rgba(255,255,255,0.25);
+        padding: 8px 14px;
+        border-radius: 30px;
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: clamp(45px, 7vw, 76px);
+        line-height: 1.05;
+        margin-bottom: 22px;
+    }
+
+    .hero p {
+        font-size: 19px;
+        color: #eefaf6;
+        max-width: 650px;
+        margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 14px 24px;
+        border-radius: 7px;
+        font-weight: 700;
+    }
+
+    .btn-primary {
+        background: white;
+        color: #087f5b;
+    }
+
+    .btn-primary:hover {
+        background: #e8f5f0;
+    }
+
+    .btn-outline {
+        border: 1px solid rgba(255,255,255,0.7);
+        color: white;
+    }
+
+    .btn-outline:hover {
+        background: rgba(255,255,255,0.12);
+    }
+
+    section {
+        padding: 75px 6%;
+    }
+
+    .content {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .intro-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .tag {
+        color: #087f5b;
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 38px;
+        color: #18352c;
+        margin: 8px 0 18px;
+    }
+
+    .text p {
+        color: #66756f;
+        margin-bottom: 18px;
+    }
+
+    .image-box {
+        min-height: 380px;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #e8f5f0;
+    }
+
+    .image-box img {
+        width: 100%;
+        height: 100%;
+        min-height: 380px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .location-strip {
+        background: #f4faf8;
+    }
+
+    .location-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+    }
+
+    .location-card {
+        background: white;
+        border: 1px solid #e0ebe7;
+        border-radius: 14px;
+        padding: 28px;
+    }
+
+    .location-card h3 {
+        color: #18352c;
+        margin-bottom: 8px;
+    }
+
+    .location-card p {
+        color: #66756f;
+        font-size: 15px;
+    }
+
+    .services-preview {
+        text-align: center;
+    }
+
+    .services-preview-intro {
+        max-width: 750px;
+        margin: 0 auto 40px;
+    }
+
+    .services-preview-intro p {
+        color: #66756f;
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        text-align: left;
+    }
+
+    .service-card {
+        border: 1px solid #e0ebe7;
+        border-radius: 15px;
+        padding: 28px;
+        background: white;
+    }
+
+    .service-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 12px;
+        background: #e8f5f0;
+        color: #087f5b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+        color: #18352c;
+        margin-bottom: 8px;
+    }
+
+    .service-card p {
+        color: #66756f;
+        font-size: 15px;
+    }
+
+    .center-button {
+        margin-top: 35px;
+    }
+
+    .green-section {
+        background: #087f5b;
+        color: white;
+        text-align: center;
+    }
+
+    .green-section h2 {
+        color: white;
+    }
+
+    .green-section p {
+        color: #e5f5ef;
+        max-width: 750px;
+        margin: 0 auto 25px;
+    }
+
+    footer {
+        background: #07513d;
+        color: white;
+        padding: 45px 6% 25px;
+    }
+
+    .footer-grid {
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 35px;
+    }
+
+    footer h3 {
+        margin-bottom: 12px;
+    }
+
+    footer p,
+    footer a {
+        color: #c4d9d2;
+        font-size: 14px;
+    }
+
+    footer a:hover {
+        color: white;
+    }
+
+    .footer-bottom {
+        max-width: 1100px;
+        margin: auto;
+        border-top: 1px solid rgba(255,255,255,0.18);
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap;
+        color: #a8c3ba;
+        font-size: 13px;
+    }
+
+    .jompo-link {
+        color: #c4d9d2;
+        font-weight: bold;
+    }
+
+    .jompo-link:hover {
+        color: white;
+    }
+
+    @media (max-width: 850px) {
+
         .top-bar {
-            background: #087f5b;
-            color: white;
-            padding: 9px 6%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 14px;
+            flex-direction: column;
+            text-align: center;
+            gap: 4px;
         }
 
-        /* NAVIGATION */
         header {
-            background: white;
-            padding: 18px 6%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #e5eeeb;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-placeholder {
-            width: 48px;
-            height: 48px;
-            border-radius: 10px;
-            background: #e8f5f0;
-            color: #087f5b;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .hospital-name {
-            font-size: 21px;
-            font-weight: 700;
-            color: #075c43;
-        }
-
-        .hospital-location {
-            font-size: 12px;
-            color: #66756f;
+            flex-direction: column;
+            gap: 15px;
         }
 
         nav {
-            display: flex;
-            gap: 28px;
-        }
-
-        nav a {
-            color: #344840;
-            font-weight: 600;
-            font-size: 15px;
-        }
-
-        nav a:hover {
-            color: #087f5b;
-        }
-
-        /* HERO */
-        .hero {
-            min-height: 600px;
-            background:
-                linear-gradient(rgba(7, 92, 67, 0.68), rgba(7, 92, 67, 0.68)),
-                url("images/hospital-hero.jpg");
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            padding: 70px 6%;
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 720px;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.16);
-            border: 1px solid rgba(255,255,255,0.4);
-            padding: 8px 16px;
-            border-radius: 30px;
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
-
-        .hero h1 {
-            font-size: clamp(40px, 6vw, 68px);
-            line-height: 1.05;
-            margin-bottom: 22px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            max-width: 650px;
-            margin-bottom: 30px;
-            color: #eefaf6;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 14px;
+            gap: 16px;
             flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 13px 23px;
-            border-radius: 7px;
-            font-weight: 700;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #087f5b;
-        }
-
-        .btn-secondary {
-            border: 1px solid rgba(255,255,255,0.75);
-            color: white;
-        }
-
-        /* GENERAL */
-        section {
-            padding: 75px 6%;
-        }
-
-        .section-heading {
-            max-width: 700px;
-            margin-bottom: 40px;
-        }
-
-        .section-heading span {
-            color: #087f5b;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 13px;
-        }
-
-        .section-heading h2 {
-            font-size: 38px;
-            margin: 8px 0 12px;
-            color: #18352c;
-        }
-
-        .section-heading p {
-            color: #66756f;
-        }
-
-        /* INTRO */
-        .intro {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .intro-image {
-            min-height: 380px;
-            border-radius: 16px;
-            background: #e8f5f0 url("images/hospital-about.jpg") center/cover;
-        }
-
-        .intro-text h2 {
-            font-size: 38px;
-            color: #18352c;
-            margin-bottom: 18px;
-        }
-
-        .intro-text p {
-            color: #66756f;
-            margin-bottom: 18px;
-        }
-
-        /* TRUST */
-        .trust {
-            background: #f4faf8;
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .trust-card {
-            background: white;
-            padding: 30px;
-            border-radius: 14px;
-            border: 1px solid #e0ebe7;
-        }
-
-        .trust-icon {
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
-
-        .trust-card h3 {
-            color: #18352c;
-            margin-bottom: 8px;
-        }
-
-        .trust-card p {
-            color: #66756f;
-            font-size: 15px;
-        }
-
-        /* SHA */
-        .sha-section {
-            background: white;
-            text-align: center;
-        }
-
-        .sha-box {
-            max-width: 850px;
-            margin: auto;
-            border: 1px solid #d9e9e3;
-            border-radius: 16px;
-            padding: 35px;
-            background: #f8fcfa;
-        }
-
-        .sha-logo-placeholder {
-            width: 110px;
-            height: 70px;
-            margin: 0 auto 18px;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            background: #e8f5f0;
-            color: #087f5b;
-            border-radius: 10px;
-            font-weight: bold;
         }
 
-        .sha-box h2 {
-            color: #18352c;
-            margin-bottom: 10px;
-        }
-
-        .sha-box p {
-            color: #66756f;
-        }
-
-        /* LOCATION */
-        .location {
-            background: #087f5b;
-            color: white;
-            text-align: center;
-        }
-
-        .location h2 {
-            font-size: 36px;
-            margin-bottom: 12px;
-        }
-
-        .location p {
-            color: #e5f5ef;
-            margin-bottom: 22px;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #07513d;
-            color: white;
-            padding: 45px 6% 25px;
-        }
-
+        .intro-grid,
+        .location-grid,
+        .service-grid,
         .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 35px;
+            grid-template-columns: 1fr;
         }
 
-        footer h3 {
-            margin-bottom: 12px;
+        .hero {
+            min-height: 560px;
         }
 
-        footer p,
-        footer a {
-            color: #c4d9d2;
-            font-size: 14px;
+        h2 {
+            font-size: 30px;
         }
+    }
+</style>
+```
 
-        footer a:hover {
-            color: white;
-        }
+</head>
 
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.18);
-            padding-top: 20px;
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-            flex-wrap: wrap;
-            font-size: 13px;
-            color: #a8c3ba;
-        }
-
-        .jompo-link {
-            color: #c4d9d2;
-            font-weight: 700;
-        }
-
-        .jompo-link:hover {
-            color: white;
-        }
-
-        /* MOBILE */
-        @media (max-width: 800px) {
-
-            .top-bar {
-                flex-direction: column;
-                gap: 4px;
-                text-align: center;
-            }
-
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav {
-                gap: 16px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero {
-                min-height: 520px;
-                text-align: center;
-                justify-content: center;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .intro,
-            .trust-grid,
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-heading h2,
-            .intro-text h2 {
-                font-size: 30px;
-            }
-        }
-    </style>
 <body>
 
-    <!-- TOP BAR -->
-    <div class="top-bar">
-        <span>Braniomngima Hospital — Oyugis, Kenya</span>
-        <span>SHA Accredited</span>
-    </div>
+```
+<div class="top-bar">
+    <span>Braniomngima Hospital — Oyugis, Kenya</span>
+    <span>SHA Accredited</span>
+</div>
 
-    <!-- NAVIGATION -->
-    <header>
+<header>
 
-        <div class="logo-area">
-            <div class="logo-placeholder">BH</div>
+    <div class="logo-area">
 
-            <div>
-                <div class="hospital-name">Braniomngima Hospital</div>
-                <div class="hospital-location">
-                    Oyugis • Kisii–Kisumu Highway
-                </div>
+        <div class="logo-placeholder">
+            BH
+        </div>
+
+        <div>
+            <div class="hospital-name">
+                Braniomngima Hospital
+            </div>
+
+            <div class="hospital-location">
+                Oyugis • Kisii–Kisumu Highway
             </div>
         </div>
+
+    </div>
+
+    <nav>
+
+        <a href="index.html" class="active">
+            Home
+        </a>
+
+        <a href="about.html">
+            About Us
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            SHA Accredited Healthcare Facility
+        </span>
+
+        <h1>
+            Braniomngima Hospital
+        </h1>
+
+        <p>
+            Accessible healthcare for individuals and families
+            in Oyugis and surrounding communities.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="services.html" class="btn btn-primary">
+                Explore Our Services
+            </a>
+
+            <a href="contact.html" class="btn btn-outline">
+                Contact the Hospital
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="content">
+
+        <div class="intro-grid">
+
+            <div class="text">
+
+                <span class="tag">
+                    Welcome
+                </span>
+
+                <h2>
+                    Healthcare Close to You
+                </h2>
+
+                <p>
+                    Braniomngima Hospital is located in Oyugis,
+                    along the Kisii–Kisumu Highway, opposite
+                    Equity Bank.
+                </p>
+
+                <p>
+                    Our location provides convenient access to
+                    healthcare for patients and families in Oyugis
+                    and surrounding communities.
+                </p>
+
+                <p>
+                    More information about the hospital, its
+                    departments and healthcare services will be
+                    added as details are confirmed by hospital
+                    management.
+                </p>
+
+                <a href="about.html" class="btn btn-primary">
+                    Learn More About Us
+                </a>
+
+            </div>
+
+            <div class="image-box">
+
+                <img src="images/hospital-about.jpg"
+                     alt="Braniomngima Hospital">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="location-strip">
+
+    <div class="content">
+
+        <div class="location-grid">
+
+            <div class="location-card">
+
+                <h3>
+                    📍 Our Location
+                </h3>
+
+                <p>
+                    Along the Kisii–Kisumu Highway,
+                    Oyugis, Kenya.
+                </p>
+
+            </div>
+
+            <div class="location-card">
+
+                <h3>
+                    🏦 Easy to Find
+                </h3>
+
+                <p>
+                    Located opposite Equity Bank in Oyugis.
+                </p>
+
+            </div>
+
+            <div class="location-card">
+
+                <h3>
+                    ✓ SHA Accredited
+                </h3>
+
+                <p>
+                    Braniomngima Hospital is a confirmed
+                    SHA-accredited healthcare facility.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="services-preview">
+
+    <div class="content">
+
+        <div class="services-preview-intro">
+
+            <span class="tag">
+                Healthcare Services
+            </span>
+
+            <h2>
+                Supporting Your Healthcare Needs
+            </h2>
+
+            <p>
+                Explore the healthcare services available at
+                Braniomngima Hospital. The full service list
+                will be updated following confirmation by
+                hospital management.
+            </p>
+
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🩺
+                </div>
+
+                <h3>
+                    General Medical Care
+                </h3>
+
+                <p>
+                    Healthcare support for common medical needs,
+                    consultations and patient care.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Outpatient Care
+                </h3>
+
+                <p>
+                    Accessible outpatient healthcare for patients
+                    requiring medical attention and consultation.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🏥
+                </div>
+
+                <h3>
+                    More Services
+                </h3>
+
+                <p>
+                    Additional departments and specialized
+                    services will be listed after confirmation.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="center-button">
+
+            <a href="services.html" class="btn btn-primary">
+                View All Services
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="green-section">
+
+    <div class="content">
+
+        <h2>
+            Find Braniomngima Hospital in Oyugis
+        </h2>
+
+        <p>
+            We are located along the Kisii–Kisumu Highway,
+            opposite Equity Bank.
+        </p>
+
+        <a href="contact.html" class="btn btn-primary">
+            Visit Our Contact Page
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>
+                Braniomngima Hospital
+            </h3>
+
+            <p>
+                Along the Kisii–Kisumu Highway,
+                Oyugis, Kenya.
+            </p>
+
+            <p>
+                Opposite Equity Bank.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <p>
+                <a href="index.html">
+                    Home
+                </a>
+            </p>
+
+            <p>
+                <a href="about.html">
+                    About Us
+                </a>
+            </p>
+
+            <p>
+                <a href="services.html">
+                    Services
+                </a>
+            </p>
+
+            <p>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>
+                Location
+            </h3>
+
+            <p>
+                Oyugis, Kenya
+            </p>
+
+            <p>
+                Opposite Equity Bank
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Braniomngima Hospital.
+            All Rights Reserved.
+        </span>
+
+        <span>
+
+            Website designed & developed by
+
+            <a class="jompo-link"
+               href="https://jompo.co.ke"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                JOMPO Digital Solutions
+
+            </a>
+
+        </span>
+
+    </div>
+
+</footer>
 ```
+
+</body>
+</html>
